@@ -1,13 +1,13 @@
 #!/usr/bin/env bun
 
-import { program } from 'commander';
-import chalk from 'chalk';
-import figlet from 'figlet';
-import { Logger } from '@/utils/logger';
 import { Config } from '@/utils/config';
 import { setupErrorHandlers } from '@/utils/error-handlers';
-import { CommandRegistry, type CommandDefinition } from './command-registry';
+import { Logger } from '@/utils/logger';
+import chalk from 'chalk';
+import { program } from 'commander';
+import figlet from 'figlet';
 import { CommandDiscovery } from './command-discovery';
+import { CommandRegistry, type CommandDefinition } from './command-registry';
 
 /**
  * CLI应用程序主入口
@@ -178,6 +178,7 @@ export class CLIApp {
  * 创建并启动CLI应用程序
  */
 export async function createCLI(): Promise<void> {
+  await Config.initialize();
   const config = Config.get();
   const version = config?.version || '1.2.0';
 

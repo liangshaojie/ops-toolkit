@@ -4,12 +4,12 @@
   "description": "A comprehensive DevOps CLI toolkit with terminal UI",
   "main": "dist/index.js",
   "bin": {
-    "ops": "./bin/ops-toolkit.ts",
-    "ops-toolkit": "./bin/ops-toolkit.ts"
+    "ops": "./dist/bin/ops-toolkit.js",
+    "ops-toolkit": "./dist/bin/ops-toolkit.js"
   },
   "scripts": {
     "dev": "bun --watch src/index.ts",
-    "build": "bun build src/index.ts --outdir dist --target node",
+    "build": "bun build src/index.ts --outdir dist --target node && bun build bin/ops-toolkit.ts --outdir dist/bin --target node && chmod +x dist/bin/ops-toolkit.js",
     "start": "bun src/index.ts",
     "lint": "eslint src bin",
     "lint:fix": "eslint src bin --fix",
