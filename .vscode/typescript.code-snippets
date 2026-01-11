@@ -1,0 +1,61 @@
+{
+  "TypeScript CLI Command": {
+    "prefix": "cli-cmd",
+    "body": [
+      "program",
+      "  .command('${1:commandName}')",
+      "  .description('${2:Description}')",
+      "  .action(async (${3:options}) => {",
+      "    $0",
+      "  });"
+    ],
+    "description": "Create a new CLI command"
+  },
+  "TypeScript Async Function": {
+    "prefix": "async-fn",
+    "body": [
+      "async function ${1:functionName}(${2:args}): Promise<${3:returnType}> {",
+      "  $0",
+      "}"
+    ],
+    "description": "Create an async function"
+  },
+  "Try-Catch Error Handler": {
+    "prefix": "try-catch",
+    "body": [
+      "try {",
+      "  $0",
+      "} catch (error) {",
+      "  console.error(chalk.red('❌ Error:'), error);",
+      "  process.exit(1);",
+      "}"
+    ],
+    "description": "Try-catch with error handling"
+  },
+  "Chalk Colored Log": {
+    "prefix": "log",
+    "body": ["console.log(chalk.${1|red,green,yellow,blue,magenta,cyan,gray,white}('$2'));"],
+    "description": "Colored console log with chalk"
+  },
+  "Commander Option": {
+    "prefix": "cmd-opt",
+    "body": ["program.option('${1:-f, --flag}', '${2:description}', ${3|true,false|});"],
+    "description": "Add a Commander CLI option"
+  },
+  "Bun Test": {
+    "prefix": "test-desc",
+    "body": [
+      "describe('${1:test suite}', () => {",
+      "  it('${2:test case}', () => {",
+      "    $0",
+      "  });",
+      "});"
+    ],
+    "description": "Bun test describe block"
+  },
+  "Import Statement": {
+    "prefix": "imp",
+    "body": ["import { $1 } from '$2';"],
+    "description": "Import statement"
+  }
+}
