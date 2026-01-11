@@ -1,0 +1,89 @@
+{
+  "name": "ops-toolkit",
+  "version": "1.0.0",
+  "description": "A comprehensive DevOps CLI toolkit with terminal UI",
+  "main": "dist/index.js",
+  "bin": {
+    "ops": "./bin/ops-toolkit.ts",
+    "ops-toolkit": "./bin/ops-toolkit.ts"
+  },
+  "scripts": {
+    "dev": "bun --watch src/index.ts",
+    "build": "bun build src/index.ts --outdir dist --target node",
+    "start": "bun src/index.ts",
+    "lint": "eslint src bin",
+    "lint:fix": "eslint src bin --fix",
+    "format": "prettier --write src/**/*.{ts,tsx}",
+    "typecheck": "tsc --noEmit",
+    "test": "bun test",
+    "prepare": "husky install",
+    "release": "standard-version",
+    "release:minor": "standard-version --release-as minor",
+    "release:major": "standard-version --release-as major",
+    "publish": "release-it"
+  },
+  "keywords": [
+    "cli",
+    "devops",
+    "ops",
+    "toolkit",
+    "terminal",
+    "tui",
+    "monitoring",
+    "logs",
+    "deployment"
+  ],
+  "author": "ops-toolkit",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/username/ops-toolkit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/username/ops-toolkit/issues"
+  },
+  "homepage": "https://github.com/username/ops-toolkit#readme",
+  "engines": {
+    "node": ">=18.0.0",
+    "bun": ">=1.0.0"
+  },
+  "dependencies": {
+    "@opentui/core": "^0.1.0",
+    "@opentui/react": "^0.1.0",
+    "commander": "^11.0.0",
+    "chalk": "^5.3.0",
+    "inquirer": "^9.2.0",
+    "ora": "^7.0.0",
+    "figlet": "^1.6.0",
+    "cli-table3": "^0.6.3",
+    "boxen": "^7.1.1"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.8.1",
+    "@commitlint/config-conventional": "^17.8.1",
+    "@release-it/conventional-changelog": "^5.1.1",
+    "@types/figlet": "^1.5.8",
+    "@types/inquirer": "^9.0.7",
+    "@types/node": "^20.0.0",
+    "@types/react": "^19.2.8",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/parser": "^6.21.0",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.1.3",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.2.0",
+    "prettier": "^3.2.5",
+    "release-it": "^16.3.0",
+    "standard-version": "^9.5.0",
+    "typescript": "^5.3.3"
+  },
+  "lint-staged": {
+    "*.{ts}": [
+      "bun run lint:fix"
+    ],
+    "*.{json,md,yml,yaml}": [
+      "prettier --write"
+    ]
+  }
+}

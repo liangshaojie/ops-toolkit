@@ -1,0 +1,29 @@
+{
+  "git": {
+    "commit": true,
+    "tag": true,
+    "push": true,
+    "commitMessage": "chore(release): ${version}",
+    "tagName": "v${version}"
+  },
+  "github": {
+    "release": true,
+    "owner": "username",
+    "repo": "ops-toolkit"
+  },
+  "npm": {
+    "publish": true,
+    "access": "public"
+  },
+  "hooks": {
+    "before:init": ["bun run lint", "bun run typecheck", "bun run test"],
+    "after:bump": ["bun run build"],
+    "after:release": ["git push origin HEAD"]
+  },
+  "plugins": {
+    "@release-it/conventional-changelog": {
+      "preset": "angular",
+      "infile": "CHANGELOG.md"
+    }
+  }
+}
