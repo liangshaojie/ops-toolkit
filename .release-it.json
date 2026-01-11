@@ -14,7 +14,7 @@
   "npm": {
     "publish": true,
     "access": "public",
-    "token": "${NPM_TOKEN}",
+    "token": "",
     "skipChecks": true
   },
   "hooks": {
