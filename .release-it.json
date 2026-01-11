@@ -13,7 +13,8 @@
   },
   "npm": {
     "publish": true,
-    "access": "public"
+    "access": "public",
+    "token": "${NPM_TOKEN}"
   },
   "hooks": {
     "before:init": ["bun run lint", "bun run typecheck"],

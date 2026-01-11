@@ -4,8 +4,8 @@
   "description": "A comprehensive DevOps CLI toolkit with terminal UI",
   "main": "dist/index.js",
   "bin": {
-    "ops": "./dist/bin/ops-toolkit.js",
-    "ops-toolkit": "./dist/bin/ops-toolkit.js"
+    "ops": "dist/bin/ops-toolkit.js",
+    "ops-toolkit": "dist/bin/ops-toolkit.js"
   },
   "scripts": {
     "dev": "bun --watch src/index.ts",
@@ -40,7 +40,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/liangshaojie/ops-toolkit.git"
+    "url": "git+https://github.com/liangshaojie/ops-toolkit.git"
   },
   "bugs": {
     "url": "https://github.com/liangshaojie/ops-toolkit/issues"
