@@ -202,16 +202,17 @@ try {
 
 ## Quick Reference
 
-| Task             | Command                 |
-| ---------------- | ----------------------- |
-| Start dev server | `bun run dev`           |
-| Build project    | `bun run build`         |
-| Run tests        | `bun test`              |
-| Type check       | `bun run typecheck`     |
-| Lint and fix     | `bun run lint:fix`      |
-| Format code      | `bun run format`        |
-| Publish to npm   | `bun run publish:patch` |
-| Debug            | F5 in VS Code           |
+| Task             | Command                  |
+| ---------------- | ------------------------ |
+| Start dev server | `bun run dev`            |
+| Build project    | `bun run build`          |
+| Run tests        | `bun test`               |
+| Type check       | `bun run typecheck`      |
+| Lint and fix     | `bun run lint:fix`       |
+| Format code      | `bun run format`         |
+| Publish to npm   | `bun run publish:patch`  |
+| Publish docs     | See `docs/PUBLISHING.md` |
+| Debug            | F5 in VS Code            |
 
 ## OpenCode Custom Commands
 
