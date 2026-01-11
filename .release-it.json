@@ -14,7 +14,8 @@
   "npm": {
     "publish": true,
     "access": "public",
-    "skipChecks": true
+    "skipChecks": true,
+    "publishArgs": ["--otp=${NPM_OTP}"]
   },
   "hooks": {
     "before:init": ["bun run lint", "bun run typecheck"],
