@@ -14,7 +14,8 @@
   "npm": {
     "publish": true,
     "access": "public",
-    "token": "${NPM_TOKEN}"
+    "token": "${NPM_TOKEN}",
+    "skipChecks": true
   },
   "hooks": {
     "before:init": ["bun run lint", "bun run typecheck"],
