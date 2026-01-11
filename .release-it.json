@@ -14,12 +14,12 @@
   "npm": {
     "publish": true,
     "access": "public",
-    "token": "",
     "skipChecks": true
   },
   "hooks": {
     "before:init": ["bun run lint", "bun run typecheck"],
     "after:bump": ["bun run build"],
+    "before:release": "npm config set //registry.npmjs.org/:_authToken ",
     "after:release": ["git push origin HEAD"]
   },
   "plugins": {
