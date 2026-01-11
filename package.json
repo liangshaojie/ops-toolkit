@@ -1,6 +1,6 @@
 {
   "name": "ops-toolkit",
-  "version": "1.2.3",
+  "version": "1.2.5",
   "description": "A comprehensive DevOps CLI toolkit with terminal UI",
   "main": "dist/index.js",
   "bin": {

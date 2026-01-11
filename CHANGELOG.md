@@ -1,3 +1,31 @@
+## [1.2.5](https://github.com/liangshaojie/ops-toolkit/compare/v1.2.1...v1.2.3) (2026-01-11)
+
+### Bug Fixes
+
+- 优化 release-it 配置避免发布时序问题 ([4f19dc8](https://github.com/liangshaojie/ops-toolkit/commit/4f19dc8ea0c7aea1c2834fb10318de18661a7044))
+
+## [1.2.3](https://github.com/liangshaojie/ops-toolkit/compare/v1.2.1...v1.2.3) (2026-01-11)
+
+### Bug Fixes
+
+- 更新版本号 ([7e32b53](https://github.com/liangshaojie/ops-toolkit/commit/7e32b53027845b2768706944b4f1f483cf215c13))
+
+### Features
+
+- add optimized npm publish commands ([5e96ee6](https://github.com/liangshaojie/ops-toolkit/commit/5e96ee649f1aa0cb9c9200c3a918800003029c27))
+
+## [1.2.5](https://github.com/liangshaojie/ops-toolkit/compare/v1.2.3...v1.2.5) (2026-01-11)
+
+### Bug Fixes
+
+- 优化 release-it 配置避免发布时序问题 ([4f19dc8](https://github.com/liangshaojie/ops-toolkit/commit/4f19dc8ea0c7aea1c2834fb10318de18661a7044))
+
+## [1.2.4](https://github.com/liangshaojie/ops-toolkit/compare/v1.2.3...v1.2.4) (2026-01-11)
+
+### Bug Fixes
+
+- 优化 release-it 配置避免发布时序问题 ([4f19dc8](https://github.com/liangshaojie/ops-toolkit/commit/4f19dc8ea0c7aea1c2834fb10318de18661a7044))
+
 # Changelog
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
