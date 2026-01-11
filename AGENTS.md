@@ -208,3 +208,70 @@ try {
 | Lint and fix     | `bun run lint:fix`  |
 | Format code      | `bun run format`    |
 | Debug            | F5 in VS Code       |
+
+## OpenCode Custom Commands
+
+The project includes custom OpenCode commands for faster development. These commands are available in `.opencode/command/` directory:
+
+### Available Commands
+
+- `/add-cmd <name>` - Add a new CLI command
+- `/fix <issue>` - Fix code issues with automated checks
+- `/test` - Run and analyze test suite
+- `/release` - Prepare project for release
+- `/review <location>` - Review code changes
+- `/build` - Build and verify project
+- `/add-pkg <package>` - Add a new dependency
+- `/debug <issue>` - Get debugging help
+
+### Usage Examples
+
+```bash
+# Add a new command
+/add-cmd backup
+
+# Fix an issue
+/fix monitor command error
+
+# Run and analyze tests
+/test
+
+# Prepare for release
+/release
+
+# Review code
+/review src/utils/logger.ts
+
+# Build and verify
+/build
+
+# Add dependency
+/add-pkg axios
+
+# Get debugging help
+/debug async function not awaiting
+```
+
+### Documentation
+
+See `.opencode/README.md` for detailed documentation of all custom commands.
+
+### Creating Custom Commands
+
+To create your own commands:
+
+1. Create a `.md` file in `.opencode/command/`
+2. Use YAML frontmatter for configuration
+3. Use `$ARGUMENTS` for command arguments
+4. Use `!`command`` for shell output
+5. Use `@filename` for file references
+
+Example:
+
+```yaml
+---
+description: My custom command
+agent: build
+---
+My prompt template with $ARGUMENTS
+```
