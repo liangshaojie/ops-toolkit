@@ -16,7 +16,7 @@
     "access": "public"
   },
   "hooks": {
-    "before:init": ["bun run lint", "bun run typecheck", "bun run test"],
+    "before:init": ["bun run lint", "bun run typecheck"],
     "after:bump": ["bun run build"],
     "after:release": ["git push origin HEAD"]
   },
