@@ -36,6 +36,9 @@ bun test             # Run all tests
 ### Git & Release
 
 ```bash
+bun run publish:patch        # Upgrade patch version and publish (e.g., 1.2.1 → 1.2.2)
+bun run publish:minor        # Upgrade minor version and publish (e.g., 1.2.1 → 1.3.0)
+bun run publish:major        # Upgrade major version and publish (e.g., 1.2.1 → 2.0.0)
 bun run release              # Create release with changelog
 bun run release:minor        # Minor version bump
 bun run release:major        # Major version bump
@@ -199,15 +202,16 @@ try {
 
 ## Quick Reference
 
-| Task             | Command             |
-| ---------------- | ------------------- |
-| Start dev server | `bun run dev`       |
-| Build project    | `bun run build`     |
-| Run tests        | `bun test`          |
-| Type check       | `bun run typecheck` |
-| Lint and fix     | `bun run lint:fix`  |
-| Format code      | `bun run format`    |
-| Debug            | F5 in VS Code       |
+| Task             | Command                 |
+| ---------------- | ----------------------- |
+| Start dev server | `bun run dev`           |
+| Build project    | `bun run build`         |
+| Run tests        | `bun test`              |
+| Type check       | `bun run typecheck`     |
+| Lint and fix     | `bun run lint:fix`      |
+| Format code      | `bun run format`        |
+| Publish to npm   | `bun run publish:patch` |
+| Debug            | F5 in VS Code           |
 
 ## OpenCode Custom Commands
 

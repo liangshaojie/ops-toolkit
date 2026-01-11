@@ -20,7 +20,10 @@
     "release": "standard-version",
     "release:minor": "standard-version --release-as minor",
     "release:major": "standard-version --release-as major",
-    "publish": "release-it"
+    "publish": "release-it",
+    "publish:patch": "release-it --increment=patch",
+    "publish:minor": "release-it --increment=minor",
+    "publish:major": "release-it --increment=major"
   },
   "keywords": [
     "cli",
