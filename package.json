@@ -37,12 +37,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/username/ops-toolkit.git"
+    "url": "https://github.com/liangshaojie/ops-toolkit.git"
   },
   "bugs": {
-    "url": "https://github.com/username/ops-toolkit/issues"
+    "url": "https://github.com/liangshaojie/ops-toolkit/issues"
   },
-  "homepage": "https://github.com/username/ops-toolkit#readme",
+  "homepage": "https://github.com/liangshaojie/ops-toolkit#readme",
   "engines": {
     "node": ">=18.0.0",
     "bun": ">=1.0.0"
