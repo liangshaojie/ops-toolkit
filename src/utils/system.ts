@@ -9,7 +9,16 @@ const execAsync = promisify(exec);
 // 系统工具函数
 export class SystemUtils {
   // 获取系统信息
-  static async getSystemInfo() {
+  static async getSystemInfo(): Promise<{
+    hostname: string;
+    platform: string;
+    arch: string;
+    uptime: number;
+    loadAverage: number[];
+    totalMemory: number;
+    freeMemory: number;
+    cpus: os.CpuInfo[];
+  }> {
     const info = {
       hostname: os.hostname(),
       platform: os.platform(),
@@ -136,7 +145,15 @@ export class SystemUtils {
   }
 
   // 获取进程列表
-  static async getProcessList(): Promise<any[]> {
+  static async getProcessList(): Promise<
+    Array<{
+      pid: number;
+      user: string;
+      cpu: number;
+      memory: number;
+      command: string;
+    }>
+  > {
     try {
       const platform = os.platform();
       let command = '';
@@ -159,7 +176,13 @@ export class SystemUtils {
     }
   }
 
-  private static parseProcessList(output: string): any[] {
+  private static parseProcessList(output: string): Array<{
+    pid: number;
+    user: string;
+    cpu: number;
+    memory: number;
+    command: string;
+  }> {
     const lines = output.split('\n').slice(1); // 跳过标题行
     const processes = [];
 

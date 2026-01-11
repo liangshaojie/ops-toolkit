@@ -2,7 +2,7 @@
 export interface UIComponent {
   id: string;
   type: 'text' | 'table' | 'chart' | 'form' | 'layout';
-  props?: Record<string, any>;
+  props?: Record<string, unknown>;
   children?: UIComponent[];
 }
 
@@ -40,7 +40,7 @@ export interface FormField {
   type: 'text' | 'password' | 'select' | 'checkbox' | 'radio';
   required?: boolean;
   options?: string[];
-  defaultValue?: any;
+  defaultValue?: string | number | boolean;
 }
 
 export interface Theme {
@@ -57,5 +57,5 @@ export interface AppState {
   currentPage: string;
   loading: boolean;
   error?: string;
-  data: Record<string, any>;
+  data: Record<string, unknown>;
 }
