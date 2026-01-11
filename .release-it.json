@@ -4,7 +4,9 @@
     "tag": true,
     "push": true,
     "commitMessage": "chore(release): ${version}",
-    "tagName": "v${version}"
+    "tagName": "v${version}",
+    "requireCleanWorkingDir": false,
+    "requireUpstream": false
   },
   "github": {
     "release": true,
@@ -14,12 +16,14 @@
   "npm": {
     "publish": true,
     "access": "public",
-    "skipChecks": true
+    "skipChecks": true,
+    "ignoreVersion": false
   },
   "hooks": {
     "before:init": ["bun run lint", "bun run typecheck"],
     "after:bump": ["bun run build"],
-    "after:release": ["git push origin HEAD"]
+    "before:release": ["git add -A"],
+    "after:release": []
   },
   "plugins": {
     "@release-it/conventional-changelog": {
